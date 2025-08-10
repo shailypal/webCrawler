@@ -34,3 +34,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deployment (Vercel)
+
+- Install Vercel CLI:
+
+```bash
+npm i -g vercel
+```
+
+- Login (one-time):
+
+```bash
+vercel login
+```
+
+- Set environment variables (in Vercel dashboard or via CLI):
+  - `OPENAI_API_KEY` (optional; enables AI generation; fallback works without it)
+  - `OPENAI_MODEL` (optional; defaults to `gpt-4o-mini`)
+
+- Deploy:
+
+```bash
+vercel --prod
+```
+
+After deployment, open the provided URL. If `OPENAI_API_KEY` is set, the API will use OpenAI; otherwise, it will use the built-in local fallback generator.
